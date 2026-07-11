@@ -151,12 +151,6 @@ CLOUDINARY_API_KEY=
 CLOUDINARY_API_SECRET=
 ```
 
-### Frontend
-
-```env
-VITE_API_URL=
-```
-
 ---
 
 ## 📡 API Endpoints
