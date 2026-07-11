@@ -18,7 +18,7 @@ Share • Discover • Connect
 
 ### 🚀 Live Demo
 
-**Coming Soon**
+🔗**https://social-hub-tau.vercel.app/**
 
 ---
 
