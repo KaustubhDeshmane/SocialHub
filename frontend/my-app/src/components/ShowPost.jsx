@@ -15,7 +15,7 @@ function ShowPost({ refreshTrigger }) {
 
   const fetchFiles = () => {
     axios
-      .get("http://localhost:3000/files")
+      .get(`${import.meta.env.VITE_API_URL}/files`)
       .then((response) => setFiles(response.data))
       .catch((error) => console.error(error));
   };
@@ -24,7 +24,7 @@ function ShowPost({ refreshTrigger }) {
     if (!window.confirm("Delete this post?")) return;
 
     axios
-      .delete(`http://localhost:3000/delete/${id}`)
+      .delete(`${import.meta.env.VITE_API_URL}/delete/${id}`)
       .then(() => fetchFiles())
       .catch((error) => console.error(error));
   };

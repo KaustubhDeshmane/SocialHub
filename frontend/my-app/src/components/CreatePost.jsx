@@ -29,7 +29,7 @@ function CreatePost(props) {
     formData.append("caption", caption);
 
     try {
-      await axios.post("http://localhost:3000/upload", formData, {
+      await axios.post( `${import.meta.env.VITE_API_URL}/upload`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

@@ -59,7 +59,7 @@ const Click = ({ onClose, onUpload }) => {
 
     try {
       await axios.post(
-        "http://localhost:3000/upload",
+       `${import.meta.env.VITE_API_URL}/upload`,
         formData,
         {
           headers: {
