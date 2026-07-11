@@ -14,6 +14,7 @@ app.use(express.json());
 // app.use('/uploads',express.static('uploads'));
 
 const url = process.env.MONGO_URI;
+console.log("MONGO_URI =", url);
 
 cloudinary.config({
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
