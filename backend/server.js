@@ -136,13 +136,6 @@ app.post("/upload", recep.single("file"),
         
         )
 
-app.use((req, res) => {
-    res.status(404).json({
-        success: false,
-        message: "Route not found."
-    });
-});
-
 app.get("/", (req, res) => {
     res.json({
         success: true,
@@ -150,8 +143,15 @@ app.get("/", (req, res) => {
     });
 });
 
+app.use((req, res) => {
+    res.status(404).json({
+        success: false,
+        message: "Route not found."
+    });
+});
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-    console.log(`Express is ready on port ${PORT}`);
+    console.log(`🚀 Server running at http://localhost:${PORT}`);
 });
